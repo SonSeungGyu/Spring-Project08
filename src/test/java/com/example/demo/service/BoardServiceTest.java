@@ -24,4 +24,24 @@ public class BoardServiceTest {
 			System.out.println(boardDTO);
 		}
 	}
+	
+	
+	
+	@Test
+	public void 게시물등록() {
+		// 회원 객체 생성
+		BoardDTO dto = BoardDTO
+						.builder()
+						.title("1번글")
+						.content("내용입니다")
+						.writer("user1")
+						.build();
+		service.register(dto);
+	}
+	
+	@Test
+	public void 게시물조회() {
+		BoardDTO dto = service.read(1);
+		System.out.println(dto);
+	}
 }
