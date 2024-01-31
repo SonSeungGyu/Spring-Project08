@@ -24,8 +24,8 @@
 			<tbody>
 				<tr th:each="dto : ${list}">
 					<th>
-						<!-- no파라미터에 값을 담는것(dto.no),  --> <a
-						th:href="@{/board/read(no = ${dto.no})}">[[${dto.no}]]</a>
+						<!-- no파라미터에 값을 담는것(dto.no),  --> 
+						<a th:href="@{/board/read(no = ${dto.no})}">[[${dto.no}]]</a>
 					</th>
 					<td>[[${dto.title}]]</td>
 					<td>[[${dto.writer}]]</td>
